@@ -1,0 +1,19 @@
+ID, Setelah selesai belajar, saya pergi ke rumah nenek untuk makan malam bersama keluarga besar.
+MY, Selepas habis belajar, saya pergi ke rumah nenek untuk makan malam bersama keluarga besar.
+ACE, Lheuh seuleusoe meurunoe, lon jak u rumoh mak tuha lon jak makan malam ngon keluarga besar lon.
+TGL, Pagkatapos kong mag-aral, pumunta ako sa bahay ng aking lola para kumain ng hapunan kasama ang aking pamilya.
+
+ID, Meskipun hujan turun deras, mereka tetap berlatih menari di pendopo sampai larut malam.
+MY, Walaupun hujan turun dengan lebat, mereka terus berlatih menari di astaka sehingga larut malam.
+ACE, Bah pih ujeuen raya, awak nyan teutap ji latihan meunari lam paviliun sampoe malam..
+TGL, Kahit malakas ang ulan ay nagpatuloy pa rin sila sa pagsasayaw sa pavilion hanggang hating-gabi.
+
+ID, Ibu berjalan-jalan di sekitar pasar setiap pagi untuk membeli bahan masakan .
+MY, Ibu bersiar-siar di pasar setiap pagi untuk membeli bahan masakan..
+ACE, Mak tiep beungoh jak meuputa-puta bak pasai jak bloe bahan-bahan masak.
+TGL, Naglilibot si Nanay sa palengke tuwing umaga para bumili ng mga sangkap sa pagluluto.
+
+ID, Anak-anak itu bermain kejar-kejaran di halaman sekolah sambil tertawa riang.
+MY, Kanak-kanak sedang bermain tag di perkarangan sekolah sambil ketawa riang..
+ACE, Aneuk miet teungoh jimeu'en tag di leun sikula sambil jikhem-khem seunang.
+TGL, Naglalaro ang mga bata sa bakuran ng paaralan habang masayang nagtatawanan.
