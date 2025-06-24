@@ -23,24 +23,29 @@ def levehnsteinDistance(s1, s2):
             )
     return dp[m][n]
 
-
+# cek tipe reduplikasi dari kata
 def isReduplicate(word: str) -> str:
+    # kasus kata berulang (anak-anak)
     if re.fullmatch(r'(\w+)-\1', word):
         return "pure"
     elif re.fullmatch(r'\w+-\w+', word):
         part1, part2 = word.split('-')
-
+        # ada imbuhan awal
         if part1[1:] == part2:
-            return "derived_first"       
+            return "derived_first"     
+        # ada imbuhan akhir  
         elif part1 == part2[:-1]:
-            return "derived_last"         
+            return "derived_last"       
+        # ada imbuhan awal dan akhir  
         elif part1[1:] == part2[:-1]:
-            return "derived_first_last"     
+            return "derived_first_last"    
+        else:
+            return "none" 
     else:
         return "none"
 
 
-def reduplicationSimiliarity(sent1: str, sent2: str) -> float:
+def reduplicationSimiliarity(sentence1: str, sentence2: str) -> float:  
     # filter kata yang berulang dari kalimat
     def extractReduplicatedWords(sent):
         words = sent.lower().split()
@@ -50,29 +55,29 @@ def reduplicationSimiliarity(sent1: str, sent2: str) -> float:
             if isReduplicate(word.strip(string.punctuation)) != "none"
         ]
 
-    red1 = extractReduplicatedWords(sent1)
-    red2 = extractReduplicatedWords(sent2)
+    rWord1 = extractReduplicatedWords(sentence1)
+    rWord2 = extractReduplicatedWords(sentence2)
 
-    min_len = min(len(red1), len(red2))
+    min_len = min(len(rWord1), len(rWord2))
     if min_len == 0:
-        return 1.0 if len(red1) == len(red2) else 0.0
+        return 1.0 if len(rWord1) == len(rWord2) else 0.0
 
     match = 0
     for i in range(min_len):
-        _, type1 = red1[i]
-        _, type2 = red2[i]
+        _, type1 = rWord1[i]
+        _, type2 = rWord2[i]
         if type1 == type2:
             match += 1
 
-    return match / max(len(red1), len(red2))
+    return match / max(len(rWord1), len(rWord2))
 
 
 # Menghitung ukuran kemiripan leksikal antar dua kalimat dengan levehnstein distance
-def lexicalSimiliarity(sent1: str, sent2: str) -> float:
-    max_len = max(len(sent1), len(sent2))
+def lexicalSimiliarity(sentence1: str, sentence2: str) -> float:
+    max_len = max(len(sentence1), len(sentence2))
     if max_len == 0:
         return 1.0  # identik
-    dist = levehnsteinDistance(sent1, sent2)
+    dist = levehnsteinDistance(sentence1, sentence2)
     return 1 - dist / max_len
 
 # Baca file txt dan kelompokkan kalimat berdasarkan bahasa sebagai dict
